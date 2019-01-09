@@ -26,5 +26,6 @@ const generateCell = function(id) {
 };
 
 window.onload = function() {
-  generateGrid(5);
+  generateGrid(10);
+  loadBotShips();
 };
