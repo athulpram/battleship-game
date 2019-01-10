@@ -17,6 +17,10 @@ const ships = {
   }
 };
 
+const fireStatus = function(location){
+  return true;
+}
+
 const loadBotShips = function() {
   Object.assign(botShips, ships);
   Object.keys(botShips).forEach(

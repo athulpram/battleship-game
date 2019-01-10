@@ -25,7 +25,15 @@ const generateCell = function(id) {
   return cell;
 };
 
+const handleClick = function() {
+  gridId = event.target.id;
+  if (fireStatus(gridId)) {
+    document.getElementById(gridId).innerText = "X";
+  }
+};
+
 window.onload = function() {
   generateGrid(10);
   loadBotShips();
+  document.getElementById("table").onclick = handleClick;
 };
