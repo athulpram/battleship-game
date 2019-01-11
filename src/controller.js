@@ -21,19 +21,23 @@ const generateRow = function(stratCell, gridSize) {
 const generateCell = function(id) {
   let cell = document.createElement("td");
   cell.setAttribute("id", id);
+  cell.setAttribute("onclick", "handleClick()");
   cell.setAttribute("class", "groundCell");
   return cell;
 };
 
 const handleClick = function() {
-  gridId = event.target.id;
-  if (fireStatus(gridId)) {
-    document.getElementById(gridId).innerText = "X";
+  console.log("handling click");
+  let gridId = +event.target.id;
+  if (fireStatus(gridId).status) {
+    return (document.getElementById(gridId).innerText = "X");
   }
+  document.getElementById(gridId).innerText = "O";
 };
 
-window.onload = function() {
+const initialize = function() {
   generateGrid(10);
   loadBotShips();
-  document.getElementById("table").onclick = handleClick;
 };
+
+window.onload = initialize;
