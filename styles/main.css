@@ -2,15 +2,23 @@
   height: 50px;
   width: 50px;
   border: 1px solid white;
-  background: black;
+  background: navy;
   color: white;
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
 }
 
+.screen {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 #table {
   width: 600px;
-  margin: 0 auto;
   text-align: center;
+}
+
+.control {
+  width: 500px;
 }

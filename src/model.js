@@ -8,13 +8,13 @@ class Ship {
     this.positions = getRandomShipPosition(size);
   }
   isAlive() {
-    return !(this.damages.length == this.size);
+    return this.damages.length != this.size;
   }
 }
 
 const ships = {
   aircraftCarrier: {
-    size: 2
+    size: 5
   },
   battleShip: {
     size: 4
